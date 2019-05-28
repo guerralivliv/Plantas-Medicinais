@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-cinza{
+    background-color: rgba(20, 20, 20, .50); 
+}
