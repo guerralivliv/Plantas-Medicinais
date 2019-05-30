@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormprodutoComponent } from './produto/formproduto/formproduto.component';
 import { FormusuarioComponent } from './usuario/formusuario/formusuario.component';
 import { MainComponent } from './pages/main/main.component';
+import { LoginentraComponent } from './entra/loginentra/loginentra.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MainComponent } from './pages/main/main.component';
     AppComponent,
     FormprodutoComponent,
     FormusuarioComponent,
-    MainComponent
+    MainComponent,
+    LoginentraComponent
   ],
   imports: [
     BrowserModule,
