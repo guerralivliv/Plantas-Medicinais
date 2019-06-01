@@ -4,10 +4,12 @@ import { FormusuarioComponent } from './usuario/formusuario/formusuario.componen
 import { MainComponent } from './pages/main/main.component';
 import { LoginentraComponent } from './entra/loginentra/loginentra.component';
 
+
 const routes: Routes = [
   {path:'usuario', component: FormusuarioComponent},
   {path:'', component: MainComponent},
-  {path:'entra', component: LoginentraComponent}
+  {path:'entra', component: LoginentraComponent},
+ 
   
 ];
 

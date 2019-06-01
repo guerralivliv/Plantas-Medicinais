@@ -8,6 +8,14 @@ import { FormusuarioComponent } from './usuario/formusuario/formusuario.componen
 import { MainComponent } from './pages/main/main.component';
 import { LoginentraComponent } from './entra/loginentra/loginentra.component';
 
+//app.module.ts conexão firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { FormsModule }   from '@angular/forms';
+//lista
+import { ListaComponent } from './pagina/lista/lista.component';
+
 
 @NgModule({
   declarations: [
@@ -15,11 +23,16 @@ import { LoginentraComponent } from './entra/loginentra/loginentra.component';
     FormprodutoComponent,
     FormusuarioComponent,
     MainComponent,
-    LoginentraComponent
+    LoginentraComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+      AngularFireModule.initializeApp(environment.firebase),
+      AngularFireDatabaseModule,
+      FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
