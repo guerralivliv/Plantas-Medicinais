@@ -7,8 +7,6 @@ import { FormusuarioService } from './../formusuario.service';
 import {Router} from "@angular/router";
 
 
-
-
 @Component({
   selector: 'app-formusuario',
   templateUrl: './formusuario.component.html',
@@ -16,15 +14,17 @@ import {Router} from "@angular/router";
 })
 
 export class FormusuarioComponent implements OnInit {
+
   usuario: Usuario
   key: string = '';
 
   constructor(private usuarioService: UsuarioService, 
     private formusuarioService: FormusuarioService, 
-    private router: Router) 
+    private router: Router
+   ) 
     { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.usuario = new Usuario();
     this.formusuarioService.currentUsuario.subscribe(data => {
       if (data.usuario && data.key) {
@@ -32,6 +32,7 @@ export class FormusuarioComponent implements OnInit {
         this.usuario.nome = data.usuario.nome;
         this.usuario.email = data.usuario.email;
         this.usuario.pws = data.usuario.pws;
+        this.usuario.confpws = data.usuario.confpws;
         this.key = data.key;
       }
     })
@@ -39,7 +40,7 @@ export class FormusuarioComponent implements OnInit {
 
   onSubmit() {
 	this.usuarioService.insert(this.usuario);
-    	this.router.navigate(['/']);
+    	this.router.navigate(['/usuario']);
 
     	this.usuario = new Usuario();
   }

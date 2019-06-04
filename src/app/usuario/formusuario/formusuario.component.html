@@ -1,22 +1,19 @@
-
 <!--from-->
 <section>
-<div class="signin">
+    <div class="signin">
 
     <form (ngSubmit)="onSubmit()">
 
         <h2>Cadastrar-se</h2>
-        <input type="text" placeholder="Apelido" [(ngModel)]="usuario.nome" name="nome" >
-        <input type="text" placeholder="E-mail" [(ngModel)]="usuario.email" name="email" >
-        <input type="password" placeholder="Senha" [(ngModel)]="usuario.pws" name="senha" > 
-        <button class="btn" type="submit">Cadastrar</button>
+    <input type="text" placeholder="Apelido" [(ngModel)]="usuario.nome" name="nome">
+    <input type="text" placeholder="E-mail" [(ngModel)]="usuario.email" name="email">
+    <input type="password" placeholder="Senha" [(ngModel)]="usuario.pws" name="senha">
+    <input type="password" placeholder="Confirmar Senha" [(ngModel)]="usuario.confpws" name="confsenha">
+    <button class="btn" type="submit">Cadastrar</button>
+
     </form>
 
-</div>
+
+    </div>
 </section>
 <!--fim form-->
-
-
-
-
-
