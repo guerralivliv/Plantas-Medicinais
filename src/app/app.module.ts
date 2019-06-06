@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
 //lista
 import { ListaComponent } from './pagina/lista/lista.component';
 
+//form 
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 
 
 
@@ -34,7 +37,8 @@ import { ListaComponent } from './pagina/lista/lista.component';
     AppRoutingModule,
       AngularFireModule.initializeApp(environment.firebase),
       AngularFireDatabaseModule,
-      FormsModule
+      FormsModule,
+      AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,6 +18,8 @@ export class FormusuarioComponent implements OnInit {
   usuario: Usuario
   key: string = '';
 
+   id = null;
+
   constructor(private usuarioService: UsuarioService, 
     private formusuarioService: FormusuarioService, 
     private router: Router
@@ -38,11 +40,43 @@ export class FormusuarioComponent implements OnInit {
     })
   }
 
-  onSubmit() {
+  onSubmit(form) {
 	this.usuarioService.insert(this.usuario);
     	this.router.navigate(['/usuario']);
 
-    	this.usuario = new Usuario();
+      this.usuario = new Usuario();
+      
+      //formulario 
+
+      if (this.id == null) {
+        this.usuarioService.save(this.usuario)
+          .then(
+            res => {
+              alert(this.usuario.nome + ". Já tá salvo!");
+              form.reset();
+              this.usuario = new Usuario;
+              this.router.navigate(['/usuario']);
+            },
+            err => {
+              alert( "Ops!! Deu erro ao salvar!" + err);
+            }
+          )
+      } else {
+        this.usuarioService.update(this.id, this.usuario)
+          .then(
+            res => {
+              this.id = null;
+              alert(this.usuario.nome + ". Foi atualizado!");
+              form.reset();
+              this.usuario = new Usuario;
+              this.router.navigate(['/usuario']);
+            },
+            err => {
+              alert( "Ops!! Deu erro na atualização!" + err);
+            }
+          );
+      }
+      //fim formulario
   }
 }
 
