@@ -6,6 +6,11 @@ import { UsuarioService } from '../usuario.service';
 import { FormusuarioService } from './../formusuario.service';
 import {Router} from "@angular/router";
 
+//google login
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
+
+
 
 @Component({
   selector: 'app-formusuario',
@@ -20,9 +25,11 @@ export class FormusuarioComponent implements OnInit {
 
    id = null;
 
-  constructor(private usuarioService: UsuarioService, 
+  constructor(public afAuth: AngularFireAuth,
+    private usuarioService: UsuarioService, 
     private formusuarioService: FormusuarioService, 
     private router: Router
+
    ) 
     { }
 
@@ -77,6 +84,12 @@ export class FormusuarioComponent implements OnInit {
           );
       }
       //fim formulario
+  }
+  login() {
+    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+  }
+  logout() {
+    this.afAuth.auth.signOut();
   }
 }
 
