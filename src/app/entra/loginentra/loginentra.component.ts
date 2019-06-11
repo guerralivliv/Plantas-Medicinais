@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-loginentra',
   templateUrl: './loginentra.component.html',
@@ -11,5 +12,5 @@ export class LoginentraComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ 
 }

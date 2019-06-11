@@ -2,23 +2,25 @@
 <section>
     <div class="signin">
 
-    <form #fc="ngForm" (ngSubmit)="onSubmit()">
+        <form #fc="ngForm" (ngSubmit)="onSubmit()">
 
-        <h2>Cadastrar-se</h2>
-        
-    <input type="text" placeholder="Apelido" [(ngModel)]="usuario.nome" #n="ngModel" name="nome" required>
-    
-    <input type="text" placeholder="E-mail" [(ngModel)]="usuario.email" #e="ngModel" name="email" required>
+            <h2>Cadastrar-se</h2>
 
-    <input type="password" placeholder="Senha" [(ngModel)]="usuario.pws" #p="ngModel" minlength="6" name="pws" required>
+            <input type="text" placeholder="Apelido" [(ngModel)]="usuario.nome" #n="ngModel" name="nome" required>
 
-    <input type="password" placeholder="Confirmar Senha" [(ngModel)]="usuario.confpws" #c="ngModel" minlength="6" name="confpws" required>
+            <input type="text" placeholder="E-mail" [(ngModel)]="usuario.email" #e="ngModel" name="email" required>
 
-    <button class="btn" type="submit" [disabled]="fc.invalid || (p.value != c.value)">Cadastrar</button><br>
+            <input type="password" placeholder="Senha" [(ngModel)]="usuario.pws" #p="ngModel" minlength="6" name="pws" required>
 
-    </form>
+            <input type="password" placeholder="Confirmar Senha" [(ngModel)]="usuario.confpws" #c="ngModel" minlength="6" name="confpws"
+                required>
 
-    <button class="google" type="submit" (click)="login()">Login pelo Google</button>
+            <button class="btn" type="submit" [disabled]="fc.invalid || (p.value != c.value)">Cadastrar</button>
+            <br>
+
+        </form>
+
+        <button class="google" type="submit" (click)="login()">Login pelo Google</button>
 
     </div>
 </section>

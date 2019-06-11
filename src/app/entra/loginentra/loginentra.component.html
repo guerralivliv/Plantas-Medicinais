@@ -4,12 +4,19 @@
     
         <form>
             <h2>Login</h2>
-            <input id="email" type="text" placeholder="E-mail">
-            <input id="senha" type="password" placeholder="Senha"> 
-            <button class="btn">Entrar</button>
+
+            <input type="email" name="email" [(ngModel)]="email" #e="ngModel" placeholder="E-mail" required>
+            <input type="password" name="pws" [(ngModel)]="pws" #p="ngModel" minlength="6" placeholder="Senha" required>
+            
+            <button type="submit" class="btn" [disabled]="fc.invalid">Entrar</button>
+            <button type="reset" [routerLink]="[('/loginentra')]" class="btn" id="af">Cancelar</button>
         </form>
     
+<!---->
+<button (click)="logout()" href="#" class="au">Sair do usuário</button>
+<!---->
+
     </div>
     </section>
-    <!--fim form-->
+
     
