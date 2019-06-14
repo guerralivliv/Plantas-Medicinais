@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormprodutoComponent } from './produto/formproduto/formproduto.component';
 import { FormusuarioComponent } from './usuario/formusuario/formusuario.component';
 import { MainComponent } from './pages/main/main.component';
 import { LoginentraComponent } from './entra/loginentra/loginentra.component';
@@ -19,6 +18,7 @@ import { ListaComponent } from './pagina/lista/lista.component';
 
 //form 
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ListaprodutoComponent } from './produtol/listaproduto/listaproduto.component';
 
 
 
@@ -28,11 +28,11 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 @NgModule({
   declarations: [
     AppComponent,
-    FormprodutoComponent,
     FormusuarioComponent,
     MainComponent,
     LoginentraComponent,
-    ListaComponent
+    ListaComponent,
+    ListaprodutoComponent
   ],
   imports: [
     BrowserModule,
