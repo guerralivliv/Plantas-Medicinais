@@ -1,0 +1,21 @@
+<!--form-->
+<section>
+    <div class="signin">
+
+<form #fc="ngForm" (ngSubmit)="onSubmit(fc)">
+
+<h2>Cadastre sua Planta Medicinal</h2>
+
+  
+    <input placeholder="Nome" type="text" name="nome" [(ngModel)]="produtol.nome" required>
+  
+    <input placeholder="Descrição" type="text" name="descricao" [(ngModel)]="produtol.descricao" required>
+  
+    <button type="submit" [disabled]="!fc.valid">Cadastrar</button>
+    <button class="btn" type="reset" [routerLink]="['/produtol']">Cancelar</button>
+
+</form>
+
+</div>
+</section>
+<!--fim form-->

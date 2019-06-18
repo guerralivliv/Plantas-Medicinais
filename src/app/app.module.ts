@@ -19,6 +19,7 @@ import { ListaComponent } from './pagina/lista/lista.component';
 //form 
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ListaprodutoComponent } from './produtol/listaproduto/listaproduto.component';
+import { AddProdutoComponent } from './produtol/add/add-produto/add-produto.component';
 
 
 
@@ -32,7 +33,8 @@ import { ListaprodutoComponent } from './produtol/listaproduto/listaproduto.comp
     MainComponent,
     LoginentraComponent,
     ListaComponent,
-    ListaprodutoComponent
+    ListaprodutoComponent,
+    AddProdutoComponent
   ],
   imports: [
     BrowserModule,

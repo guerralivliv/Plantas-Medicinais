@@ -1,0 +1,78 @@
+  
+html {
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 100vh;
+}
+
+section{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("/assets/foto1.jpg") 50% 50% no-repeat;
+    background-size: cover;
+    display: table;
+}
+
+.signin {
+    background: rgba(20, 20, 20, .50);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    padding: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+h2 {
+margin-top: 0px;
+font-family: 'Times New Roman', Times, serif;
+font-weight: lighter;
+color: white;
+font-size: 50px;
+text-align: center;
+}
+
+input {
+color: white;
+display: block;
+width: 320px;
+height: 50px;
+background: rgba(0, 0, 0, 0.3);
+outline: none;
+border: 1px solid rgba(0, 0, 0, 0.5);
+font-family: 'Times New Roman', Times, serif;
+font-weight: lighter;
+font-size: 20px;
+margin-bottom: 10px;
+padding-left: 10px;
+border-radius: 5px; 
+}
+
+button {
+width: 332px;
+height: 50px;
+font-size: 20px;
+background: white;
+font-weight: lighter;
+color: black;
+border: 0px;
+border-radius: 200px;
+font-weight: 600;
+}
+
+
+::placeholder{
+color: white;
+font-size: 20px;
+opacity: 0.5;
+}
+
+.btn{
+    width: 150px;
+    margin: 5px; 
+}
+
