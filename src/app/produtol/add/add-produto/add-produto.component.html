@@ -2,20 +2,38 @@
 <section>
     <div class="signin">
 
-<form #fc="ngForm" (ngSubmit)="onSubmit(fc)">
+        <form class="was-validated" #fc="ngForm" (ngSubmit)="onSubmit(fc)">
 
-<h2>Cadastre sua Planta Medicinal</h2>
+            <h2>Cadastro das plantas</h2>
 
-  
-    <input placeholder="Nome" type="text" name="nome" [(ngModel)]="produtol.nome" required>
-  
-    <input placeholder="Descrição" type="text" name="descricao" [(ngModel)]="produtol.descricao" required>
-  
-    <button type="submit" [disabled]="!fc.valid">Cadastrar</button>
-    <button class="btn" type="reset" [routerLink]="['/produtol']">Cancelar</button>
+            <div class="form-group">
+                <label for="foto"></label>
+                <input type="file" (change)="onFileSelected($event)">
+                <button type="button" (click)="onUpload()">Enviar</button>
+            </div>
 
-</form>
 
+            <input placeholder="Nome" type="text" name="nome" [(ngModel)]="produtol.nome" required>
+
+<div class="mb-3">
+    <label for="validationTextarea" class="msg">Descrição:</label>
+    <textarea class="form-control is-invalid" id="validationTextarea" type="text" name="descricao" [(ngModel)]="produtol.descricao" required></textarea>
+    <div class="invalid-feedback" style="color:white;">
+        Por favor insira uma mensagem na área de texto.
+    </div>
 </div>
+
+            <ul>
+                <li>
+                    <button type="submit" [disabled]="!fc.valid">Cadastrar</button>
+                </li>
+                <li>
+                    <button class="btn" type="reset" [routerLink]="['/produtol']">Cancelar</button>
+                </li>
+            </ul>
+
+        </form>
+
+    </div>
 </section>
 <!--fim form-->

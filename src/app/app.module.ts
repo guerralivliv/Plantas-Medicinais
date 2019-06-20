@@ -21,6 +21,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ListaprodutoComponent } from './produtol/listaproduto/listaproduto.component';
 import { AddProdutoComponent } from './produtol/add/add-produto/add-produto.component';
 
+//img
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
 
 
 
@@ -42,7 +45,8 @@ import { AddProdutoComponent } from './produtol/add/add-produto/add-produto.comp
       AngularFireModule.initializeApp(environment.firebase),
       AngularFireDatabaseModule,
       FormsModule,
-      AngularFireAuthModule
+      AngularFireAuthModule,
+      AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
