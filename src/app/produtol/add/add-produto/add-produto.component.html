@@ -7,12 +7,12 @@
             <h2>Cadastro das plantas</h2>
 
             <div class="form-group">
-                <label for="foto"></label>
+                <label class="imagem" for="foto">Imagem:</label>
                 <input type="file" (change)="onFileSelected($event)">
-                <button type="button" (click)="onUpload()">Enviar</button>
+                <!--<button type="button" (click)="onUpload()">Enviar</button>-->
             </div>
 
-
+            <label class="nm">Nome:</label>
             <input placeholder="Nome" type="text" name="nome" [(ngModel)]="produtol.nome" required>
 
 <div class="mb-3">
@@ -25,7 +25,7 @@
 
             <ul>
                 <li>
-                    <button type="submit" [disabled]="!fc.valid">Cadastrar</button>
+                    <button (click)="onUpload()" type="submit" [disabled]="!fc.valid">Cadastrar</button>
                 </li>
                 <li>
                     <button class="btn" type="reset" [routerLink]="['/produtol']">Cancelar</button>
