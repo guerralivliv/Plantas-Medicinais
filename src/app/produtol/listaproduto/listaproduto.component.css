@@ -1,0 +1,14 @@
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+ }
+ .card{
+    background-color: #bbffb9;
+    min-width: 250px;
+    margin: 10px;
+    height: 200px;
+    text-align: center;
+ }

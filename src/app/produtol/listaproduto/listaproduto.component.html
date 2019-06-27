@@ -1,15 +1,22 @@
 
 <section class="container">
-    <div class="row" *ngIf="produtos | async as prods">
-          <div *ngFor="let produto of prods" class="card col-md-4" [routerLink]="[ '/detail',produto.key]">
-            
-              <img src="..." class="card-img-top" [src]="produto.foto" *ngIf="produto.foto">
-                <div class="card-body">
-                  <h5 class="card-title">{{produto.nome}}</h5>
-                  <p>{{produto.descricao}}</p>
-                  <a href="#" class="btn btn-primary">Link</a>
+  <div class="row" *ngIf="produtos | async as prods">
+    <div *ngFor="let produto of prods" class="card col-md-4" [routerLink]="[ '/detail',produto.key]">
 
-                <!--  
+      <div style="overflow-x: auto">
+          <div class="conteudo">
+
+          <img src="..." class="card-img-top" [src]="produto.foto" *ngIf="produto.foto">
+          <div class="card-body">
+            <h5 class="card-title">{{produto.nome}}</h5>
+            <p>{{produto.descricao}}</p>
+            <a href="#" class="btn btn-primary">Link</a>
+          </div>
+
+        </div>
+      </div>
+        
+        <!--  
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
   Launch demo modal
 </button>
@@ -33,14 +40,8 @@
     </div>
   </div>
 </div>-->
-                </div>
+      
 
-          </div>
     </div>
+  </div>
 </section>
-  
-
-
-
-
-    
