@@ -6,11 +6,11 @@
 
             <h2>Cadastro das plantas</h2>
 
+            <!--(change)="onFileSelected($event)"-->
 
             <div class="form-group">
                 <label class="imagem" for="foto">Imagem:</label>
                 <input type="file" (change)="onFileSelected($event)">
-                <!--<button type="button" (click)="onUpload()">Enviar</button>-->
             </div>
 
             <label class="nm">Nome:</label>
@@ -23,6 +23,13 @@
         Por favor insira uma mensagem na área de texto.
     </div>
 </div>
+
+<!--modal-->
+<div class="mb-3">
+    <label for="validationTextarea" class="msg">Mais Informações:</label>
+    <textarea class="form-control is-invalid" id="ValidationTextarea" type="text" name="maisinfo" [(ngModel)]="produtol.maisinfo" required></textarea>
+</div>
+<!--modal-->
 
             <ul>
                 <li>

@@ -13,6 +13,8 @@ export class ListaprodutoComponent implements OnInit {
 
   private produtos: Observable<any>;
 
+  produtoModal: any;
+
   constructor(
     private prodService: ListaprodutoService,
   ) { 
@@ -22,4 +24,11 @@ export class ListaprodutoComponent implements OnInit {
   ngOnInit() {
   }
 
+  buscaplanta(key) {
+    this.prodService.get(key).subscribe(
+      res =>{
+        this.produtoModal = res;
+      }
+    );
+  }
 }

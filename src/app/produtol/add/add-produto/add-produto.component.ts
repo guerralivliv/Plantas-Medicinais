@@ -11,6 +11,10 @@ import { AngularFireStorage } from '@angular/fire/storage';
 //cadastro
 import { Produtol } from '../../produtol';
 
+//imagem
+import { finalize } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-add-produto',
@@ -116,5 +120,4 @@ export class AddProdutoComponent implements OnInit {
     const task = ref.put(this.selectedFile);
   }
   //img 
-
 }
